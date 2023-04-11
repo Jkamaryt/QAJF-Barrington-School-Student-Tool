@@ -2,20 +2,30 @@
 //  ContentView.swift
 //  QAJF Barrington School Student Tool
 //
-//  Created by Jack Kamaryt on 4/6/23.
+//  Created by QAJF on 4/6/23.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+           // ScrollView(.vertical) { //scroll down for more tools
+                VStack {
+                   
+                        Text("Yay! Something is on the screen")
+                        Text("Hi")
+                        Text("Hi")
+                    
+                   
+                        List{
+                            Text("Item")
+                        }
+                    
+                }
+            //}
+            .navigationTitle("Home View")
         }
-        .padding()
     }
 }
 
