@@ -12,7 +12,8 @@ struct ContentView: View {
         NavigationView {
            // ScrollView(.vertical) { //scroll down for more tools
                 VStack {
-                   
+                    NavigationLink("Homework Planner", destination: HomeworkPlannerView())
+                    
                         Text("Yay! Something is on the screen")
                         Text("Hi")
                         Text("Hi")
@@ -24,7 +25,7 @@ struct ContentView: View {
                     
                 }
             //}
-            .navigationTitle("Home View")
+            .navigationTitle("Home")
         }
     }
 }
