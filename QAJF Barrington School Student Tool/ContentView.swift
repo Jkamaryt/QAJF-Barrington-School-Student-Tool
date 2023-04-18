@@ -10,23 +10,36 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         NavigationView {
-           // ScrollView(.vertical) { //scroll down for more tools
-                VStack {
-                    NavigationLink("Homework Planner", destination: HomeworkPlannerView())
+            
+            // ScrollView(.vertical) { //scroll down for more tools
+            ZStack {
+            
+                VStack(spacing:0) {
+                    Text("Barrington High School Student Tool").font(.system(size: 20)).fontWeight(.heavy).padding()
+                    Rectangle().fill(.black).frame(width: 1000, height: 15).position(y:0)
+                        .background(Color.red)
+                }
+                
+              }
+              
+            
                     
-                        Text("Yay! Something is on the screen")
-                        Text("Hi")
-                        Text("Hi")
+            
+            
+            
+        
+                       // Text("Yay! Something is on the screen")
+                       // Text("Hi")
+                      //  Text("Hi")
                     
                    
-                        List{
-                            Text("Item")
-                        }
+                        //List{
+                         //   Text("Item")
+                       // }
                     
                 }
             //}
-            .navigationTitle("Home")
-        }
+               
     }
 }
 
