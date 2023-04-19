@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4CA78C29EEE20200522C85 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD4CA78B29EEE20200522C85 /* MapView.swift */; };
+		ADB0CE5D29F0344D00CE2A9C /* MapImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB0CE5C29F0344D00CE2A9C /* MapImageView.swift */; };
 		F186EACB29ED94B5003F9CC6 /* HomeworkPlannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EACA29ED94B5003F9CC6 /* HomeworkPlannerView.swift */; };
 		F186EACD29ED9626003F9CC6 /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EACC29ED9626003F9CC6 /* AddItemView.swift */; };
 		F186EAD129ED9678003F9CC6 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EAD029ED9678003F9CC6 /* ToDoList.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD4CA78B29EEE20200522C85 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		ADB0CE5C29F0344D00CE2A9C /* MapImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapImageView.swift; sourceTree = "<group>"; };
 		F186EACA29ED94B5003F9CC6 /* HomeworkPlannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworkPlannerView.swift; sourceTree = "<group>"; };
 		F186EACC29ED9626003F9CC6 /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 		F186EAD029ED9678003F9CC6 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 			children = (
 				F2DBD58329DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift */,
 				F2DBD58529DF14BD0004C9E0 /* ContentView.swift */,
+				AD4CA78B29EEE20200522C85 /* MapView.swift */,
+				ADB0CE5C29F0344D00CE2A9C /* MapImageView.swift */,
 				F186EACA29ED94B5003F9CC6 /* HomeworkPlannerView.swift */,
 				F186EACC29ED9626003F9CC6 /* AddItemView.swift */,
 				F186EAD029ED9678003F9CC6 /* ToDoList.swift */,
@@ -147,7 +153,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2DBD58629DF14BD0004C9E0 /* ContentView.swift in Sources */,
+				AD4CA78C29EEE20200522C85 /* MapView.swift in Sources */,
 				F2DBD58429DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift in Sources */,
+				ADB0CE5D29F0344D00CE2A9C /* MapImageView.swift in Sources */,
 				F186EAD129ED9678003F9CC6 /* ToDoList.swift in Sources */,
 				F186EACB29ED94B5003F9CC6 /* HomeworkPlannerView.swift in Sources */,
 				F186EACD29ED9626003F9CC6 /* AddItemView.swift in Sources */,
