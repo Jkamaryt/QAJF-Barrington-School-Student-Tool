@@ -9,8 +9,8 @@ import SwiftUI
 
 struct AddItemView: View {
     @Environment(\.presentationMode) var presentationMode
-    static let priorities = ["Homework", "Test", "Quiz", "Paper"]
-    static let Class = ["Math", "English", "Science", "Foreign Language", "History"]
+    static let priorities = ["Choose One", "Homework", "Test", "Quiz", "Paper"]
+    static let Class = ["Choose One", "Math", "English", "Science", "Foreign Language", "History", "Fine Arts", "Engineering/Programming"]
     @ObservedObject var toDoList: ToDoList
     @State private var priority = ""
     @State private var classes = ""
@@ -19,19 +19,23 @@ struct AddItemView: View {
     var body: some View {
         NavigationView {
             Form {
-                Picker("Priority", selection: $priority) {
+                Picker("Type of Assignment", selection: $priority) {
                     ForEach(Self.priorities, id: \.self) { priority in
                         Text(priority)
                     }
                 }
-                TextField("Description", text: $description)
+                Picker("Class", selection: $classes) {
+                    ForEach(Self.Class, id: \.self) {
+                        Classes in Text(Classes)
+                    }
+                }
+                TextField("Description (Optional)", text: $description)
                 DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
             }
-            .navigationBarTitle("Add New To-Do List", displayMode: .inline)
+            .navigationBarTitle("Add New Assignment", displayMode: .inline)
             .navigationBarItems(trailing: Button("Save") {
-                if priority.count > 0 && description.count > 0 {
-                    let item = ToDoItem(id: UUID(), priority: priority,
-                    description: description, dueDate: dueDate)
+                if priority != "Choose One" && classes != "Choose One" && priority.count > 0 && classes.count > 0 {
+                    let item = ToDoItem(id: UUID(), priority: priority,classes: classes, description: description, dueDate: dueDate)
                     toDoList.items.append(item)
                     presentationMode.wrappedValue.dismiss()
                 }
