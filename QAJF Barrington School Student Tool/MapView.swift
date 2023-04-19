@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MapView: View {
+    @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView{
            
@@ -38,6 +39,9 @@ struct MapView: View {
                 .background(Color.red)
 
             }
+            .navigationBarItems(leading: Button("Back") {
+                presentationMode.wrappedValue.dismiss()
+            })
         }
     }
 }
@@ -52,6 +56,17 @@ struct CustomButtonStyle: ButtonStyle {
         configuration.label
             .frame(width:55)
             .font(Font.custom("Coolvetica", size: 24))
+            .padding()
+            .background(.black).opacity(configuration.isPressed ? 0.0 : 1.0)
+            .foregroundColor(.white)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
+    }
+}
+struct CustomButtonStyle2: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .frame(width:250)
+            .font(Font.custom("Coolvetica", size: 20))
             .padding()
             .background(.black).opacity(configuration.isPressed ? 0.0 : 1.0)
             .foregroundColor(.white)
