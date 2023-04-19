@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeworkPlannerView: View {
     @ObservedObject var toDoList = ToDoList()
+    @Environment(\.presentationMode) var presentationMode
     @State private var showingAddItemView = false
     var body: some View {
         NavigationView {
@@ -18,6 +19,7 @@ struct HomeworkPlannerView: View {
                         VStack(alignment: .leading) {
                             Text(item.priority)
                                 .font(.headline)
+                            Text(item.classes).font(.subheadline)
                             Text(item.description)
                             
                         }
@@ -31,6 +33,7 @@ struct HomeworkPlannerView: View {
                 .onDelete { indexSet in
                     toDoList.items.remove(atOffsets: indexSet)
                 }
+                Spacer()
             }
             .navigationBarTitle("Homework Planner")
             .sheet(isPresented: $showingAddItemView, content: {
@@ -40,6 +43,9 @@ struct HomeworkPlannerView: View {
                 showingAddItemView = true}) {
                     Image(systemName: "plus")
                 })
+            .navigationBarItems(leading: Button("Back") {
+                presentationMode.wrappedValue.dismiss()
+            })
         }
     }
 }
@@ -52,6 +58,7 @@ struct HomeworkPlannerView_Previews: PreviewProvider {
 struct ToDoItem: Identifiable, Codable {
     var id = UUID()
     var priority = String()
+    var classes = String()
     var description = String()
     var dueDate = Date()
 }
