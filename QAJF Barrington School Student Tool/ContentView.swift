@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var showingHomeworkPlannerView = false
     @State private var showingMapView = false
+    @State private var showingBHSLinkView = false
     var body: some View {
         NavigationView {
             
@@ -31,9 +32,15 @@ struct ContentView: View {
                     Button(action: {showingMapView = true}) {
                         Text("Map of BHS")
                     }.buttonStyle(CustomButtonStyle2())
-                        .padding().position(x:200, y:-225).background(Color.red)
+                        .padding().position(x:200, y:-150).background(Color.red)
+                        .fullScreenCover(isPresented:$showingMapView, content:{ MapView()})
                     
-                }.fullScreenCover(isPresented:$showingMapView, content:{ MapView()})
+                    Button(action: {showingBHSLinkView = true}) {
+                        Text("BHS Links")
+                    }.buttonStyle(CustomButtonStyle2())
+                    .padding().position(x:200, y:-240).background(Color.red).fullScreenCover(isPresented:$showingBHSLinkView, content:{ BHSLinkView()})
+                    
+                }
             }
             
         }
