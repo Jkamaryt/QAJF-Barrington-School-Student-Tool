@@ -11,12 +11,28 @@ struct BHSLinkView: View {
     @Environment(\.presentationMode) var presentationMode
     var body: some View {
         NavigationView {
-            VStack {
+    
+            VStack(spacing:0) {
+                Text("Barrington High School Links").font(.system(size: 20)).fontWeight(.heavy).padding()
+                
+                Rectangle().fill(.black).frame(width: 1000, height: 15).position(y:0)
+                    .background(Color.red)
                 Link("BHS Homepage", destination: URL(string: "https://bhs.barrington220.org/")!)
+                    .buttonStyle(CustomButtonStyle2())
+                    .position(x: 200, y: -50)
+                    .background(Color.red)
+                    
                 Link("BHS District Calendar", destination: URL(string: "https://bhs.barrington220.org/district-calendar")!)
-                Link("Infinite Campus Student Login", destination: URL(string: "https://barrington220.infinitecampus.org/campus/portal/students/barrington.jsp?status=login")!)
+                    .buttonStyle(CustomButtonStyle2())
+                    .position(x: 200, y: -150)
+                    .background(Color.red)
+                    
+                Link("Infinite Campus Student Login", destination: URL(string: "https://barrington220.infinitecampus.org/campus/portal/students/barrington.jsp?status=login")!).buttonStyle(CustomButtonStyle2())
+                    .position(x: 200, y: -240)
+                    .background(Color.red)
                     .navigationBarItems(leading: Button("Back") {
                         presentationMode.wrappedValue.dismiss()
+                        
                     })
             }
         }
