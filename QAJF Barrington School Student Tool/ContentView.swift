@@ -11,6 +11,7 @@ struct ContentView: View {
     @State private var showingHomeworkPlannerView = false
     @State private var showingMapView = false
     @State private var showingBHSLinkView = false
+    @State private var showingScheduleView = false
     var body: some View {
         NavigationView {
             
@@ -25,21 +26,25 @@ struct ContentView: View {
                     Button(action: {showingHomeworkPlannerView = true}) {
                         Text("Homework Planner")
                     }.buttonStyle(CustomButtonStyle2())
-                        .padding().position(x:200, y:-60).background(Color.red)
+                        .padding().position(x:200, y:-10).background(Color.red)
                     
                         .fullScreenCover(isPresented: $showingHomeworkPlannerView, content:{ HomeworkPlannerView()})
                     
                     Button(action: {showingMapView = true}) {
                         Text("Map of BHS")
                     }.buttonStyle(CustomButtonStyle2())
-                        .padding().position(x:200, y:-150).background(Color.red)
+                        .padding().position(x:200, y:-70).background(Color.red)
                         .fullScreenCover(isPresented:$showingMapView, content:{ MapView()})
                     
                     Button(action: {showingBHSLinkView = true}) {
                         Text("BHS Links")
                     }.buttonStyle(CustomButtonStyle2())
-                    .padding().position(x:200, y:-240).background(Color.red).fullScreenCover(isPresented:$showingBHSLinkView, content:{ BHSLinkView()})
-                    
+                    .padding().position(x:200, y:-130).background(Color.red).fullScreenCover(isPresented:$showingBHSLinkView, content:{ BHSLinkView()})
+                    Button(action: {showingScheduleView = true}) {
+                        Text("BHS Day Schedule")
+                    }.buttonStyle(CustomButtonStyle2())
+                        .padding().position(x:200, y:-190).background(Color.red)
+                        .fullScreenCover(isPresented:$showingScheduleView, content:{ ScheduleView()})
                 }
             }
             
