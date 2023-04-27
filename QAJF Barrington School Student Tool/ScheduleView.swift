@@ -17,38 +17,92 @@ struct ScheduleView: View {
                     
                     Rectangle().fill(.black).frame(width: 1000, height: 15).position(y:0)
                         .background(Color.red)
-                    Text("1").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("2").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("3").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("4").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("5").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("6").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("7").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                    Text("8").font(.headline).padding().background(.white).cornerRadius(15)
-                        .position(x: 50, y: 0)
-                        .background(Color.red)
-                }
-                Group {
-                    Text("8:30 - 9:18").font(.title).padding().background(.white).cornerRadius(15)
-                        .position(x: 300, y: 0)
-                        .background(Color.red)
+                    HStack {
+                        Text("1").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                            
+                      
+                        Text("08:30 - 09:18").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("2").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("09:23 - 10:10").font(.headline).padding().background(
+                            .black).foregroundColor(.white)
+                        .cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("3").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("10:15 - 11:02").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("4").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("11:07 - 11:54").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("5").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("11:57 - 12:46").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("6").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("12:51 - 01:38").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("7").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("01:43 - 02:30").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
+                    HStack {
+                        Text("8").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 50, y: 0)
+                        
+                        Text("02:35 - 03:22").font(.headline).padding().background(
+                            .black).foregroundColor(.white).cornerRadius(15)
+                            .position(x: 0, y: 0)
+                            
+                    }.background(Color.red)
                 }
                 
             }
+            
                 .navigationBarItems(leading: Button("Back") {
                     presentationMode.wrappedValue.dismiss()
                     
