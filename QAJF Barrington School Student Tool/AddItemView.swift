@@ -18,28 +18,32 @@ struct AddItemView: View {
     @State private var dueDate = Date()
     var body: some View {
         NavigationView {
-            Form {
-                Picker("Type of Assignment", selection: $priority) {
-                    ForEach(Self.priorities, id: \.self) { priority in
-                        Text(priority)
+            ZStack{
+                Form {
+                    Picker("Type of Assignment", selection: $priority) {
+                        ForEach(Self.priorities, id: \.self) { priority in
+                            Text(priority)
+                        }
                     }
-                }
-                Picker("Class", selection: $classes) {
-                    ForEach(Self.Class, id: \.self) {
-                        Classes in Text(Classes)
+                    Picker("Class", selection: $classes) {
+                        ForEach(Self.Class, id: \.self) {
+                            Classes in Text(Classes)
+                        }
                     }
+                    TextField("Description (Optional)", text: $description)
+                    DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
                 }
-                TextField("Description (Optional)", text: $description)
-                DatePicker("Due Date", selection: $dueDate, displayedComponents: .date)
+                .navigationBarTitle("Add New Assignment", displayMode: .inline)
+                .navigationBarItems(trailing: Button("Save") {
+                    if priority != "Choose One" && classes != "Choose One" && priority.count > 0 && classes.count > 0 {
+                        let item = ToDoItem(id: UUID(), priority: priority,classes: classes, description: description, dueDate: dueDate)
+                        toDoList.items.append(item)
+                        presentationMode.wrappedValue.dismiss()
+                    }
+                })
             }
-            .navigationBarTitle("Add New Assignment", displayMode: .inline)
-            .navigationBarItems(trailing: Button("Save") {
-                if priority != "Choose One" && classes != "Choose One" && priority.count > 0 && classes.count > 0 {
-                    let item = ToDoItem(id: UUID(), priority: priority,classes: classes, description: description, dueDate: dueDate)
-                    toDoList.items.append(item)
-                    presentationMode.wrappedValue.dismiss()
-                }
-            })
+            .background(Color.red)
+            .scrollContentBackground(.hidden)
         }
     }
 }

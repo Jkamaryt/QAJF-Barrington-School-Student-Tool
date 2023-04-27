@@ -13,28 +13,37 @@ struct HomeworkPlannerView: View {
     @State private var showingAddItemView = false
     var body: some View {
         NavigationView {
-            List {
-                ForEach(toDoList.items) { item in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            Text(item.priority)
-                                .font(.headline)
-                            Text(item.classes).font(.subheadline)
-                            Text(item.description)
+            VStack{
+                List {
+                    ForEach(toDoList.items) { item in
+                        HStack {
+                            VStack(alignment: .leading) {
+                                Text(item.priority)
+                                    .font(.headline)
+                                Text(item.classes).font(.subheadline)
+                                Text(item.description)
+                                
+                            }
                             
+                            Spacer()
+                            
+                            Text(item.dueDate, style: .date)
                         }
-                        Spacer()
-                        Text(item.dueDate, style: .date)
                     }
+                    .onMove { indices, newOffset in
+                        toDoList.items.move(fromOffsets: indices, toOffset: newOffset)
+                    }
+                    .onDelete { indexSet in
+                        toDoList.items.remove(atOffsets: indexSet)
+                    }
+                    Spacer()
                 }
-                .onMove { indices, newOffset in
-                    toDoList.items.move(fromOffsets: indices, toOffset: newOffset)
-                }
-                .onDelete { indexSet in
-                    toDoList.items.remove(atOffsets: indexSet)
-                }
-                Spacer()
             }
+            .background(Color.red)
+            .accentColor(Color.white)
+            .scrollContentBackground(.hidden)
+           
+            
             .navigationBarTitle("Homework Planner")
             .sheet(isPresented: $showingAddItemView, content: {
                 AddItemView(toDoList: toDoList)
