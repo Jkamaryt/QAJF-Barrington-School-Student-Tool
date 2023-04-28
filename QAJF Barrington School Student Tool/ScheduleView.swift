@@ -17,15 +17,19 @@ struct ScheduleView: View {
     @State private var period6F = "12:54 - 01:40"
     @State private var period7F = "01:45 - 02:31"
     @State private var period8F = "02:36 - 03:22"
-    @State private var fridaySched = true
+    @State private var fridaySched = false
     var body: some View {
         NavigationView {
             VStack(spacing:0) {
-                Toggle("Friday Bell Schedule" , isOn: $fridaySched ).font(.headline).padding().background(
+                Toggle("Toggle for Friday Bell Schedule" , isOn: $fridaySched ).font(.headline).padding().background(
                     .white).foregroundColor(.black)
                 Group {
-                    Text("Barrington High School Schedule").font(.system(size: 20)).fontWeight(.heavy).padding()
-                    
+                    if fridaySched{
+                        Text("Friday Bell Schedule").font(.system(size: 20)).fontWeight(.heavy).padding()
+                    }
+                    else{
+                        Text("Regular Bell Schedule").font(.system(size: 20)).fontWeight(.heavy).padding()
+                    }
                     Rectangle().fill(.black).frame(width: 1000, height: 15).position(y:0)
                         .background(Color.red)
                     HStack {
