@@ -3,7 +3,7 @@
 //  QAJF Barrington School Student Tool
 //
 //  Created by Quinn Kozak on 4/26/23.
-//
+//  Edited by Alex Anderson on 5/1/23 (Toggle addition)
 
 import SwiftUI
 
