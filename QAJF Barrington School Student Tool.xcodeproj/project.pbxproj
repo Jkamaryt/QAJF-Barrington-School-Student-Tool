@@ -14,6 +14,11 @@
 		F186EAD129ED9678003F9CC6 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EAD029ED9678003F9CC6 /* ToDoList.swift */; };
 		F186EAD529F6CF31003F9CC6 /* BHSLinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EAD429F6CF31003F9CC6 /* BHSLinkView.swift */; };
 		F186EAD729F9710B003F9CC6 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F186EAD629F9710B003F9CC6 /* ScheduleView.swift */; };
+		F22F888D2A0013EA0007FA92 /* DirectoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F888C2A0013EA0007FA92 /* DirectoryData.swift */; };
+		F22F88902A0014880007FA92 /* SearchObservableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F888F2A0014880007FA92 /* SearchObservableObject.swift */; };
+		F22F88922A0014D50007FA92 /* TeacherDataObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F88912A0014D50007FA92 /* TeacherDataObject.swift */; };
+		F22F88942A0014F60007FA92 /* TeacherDirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F88932A0014F60007FA92 /* TeacherDirectoryView.swift */; };
+		F22F88962A0015180007FA92 /* TeacherRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22F88952A0015180007FA92 /* TeacherRowView.swift */; };
 		F2DBD58429DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBD58329DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift */; };
 		F2DBD58629DF14BD0004C9E0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2DBD58529DF14BD0004C9E0 /* ContentView.swift */; };
 		F2DBD58829DF14C10004C9E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2DBD58729DF14C10004C9E0 /* Assets.xcassets */; };
@@ -28,6 +33,11 @@
 		F186EAD029ED9678003F9CC6 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		F186EAD429F6CF31003F9CC6 /* BHSLinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BHSLinkView.swift; sourceTree = "<group>"; };
 		F186EAD629F9710B003F9CC6 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		F22F888C2A0013EA0007FA92 /* DirectoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryData.swift; sourceTree = "<group>"; };
+		F22F888F2A0014880007FA92 /* SearchObservableObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchObservableObject.swift; sourceTree = "<group>"; };
+		F22F88912A0014D50007FA92 /* TeacherDataObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDataObject.swift; sourceTree = "<group>"; };
+		F22F88932A0014F60007FA92 /* TeacherDirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherDirectoryView.swift; sourceTree = "<group>"; };
+		F22F88952A0015180007FA92 /* TeacherRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeacherRowView.swift; sourceTree = "<group>"; };
 		F2DBD58029DF14BD0004C9E0 /* QAJF Barrington School Student Tool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QAJF Barrington School Student Tool.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2DBD58329DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAJF_Barrington_School_Student_ToolApp.swift; sourceTree = "<group>"; };
 		F2DBD58529DF14BD0004C9E0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,6 +56,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F22F888E2A0013FB0007FA92 /* Directory */ = {
+			isa = PBXGroup;
+			children = (
+				F22F88932A0014F60007FA92 /* TeacherDirectoryView.swift */,
+				F22F888C2A0013EA0007FA92 /* DirectoryData.swift */,
+				F22F888F2A0014880007FA92 /* SearchObservableObject.swift */,
+				F22F88912A0014D50007FA92 /* TeacherDataObject.swift */,
+				F22F88952A0015180007FA92 /* TeacherRowView.swift */,
+			);
+			path = Directory;
+			sourceTree = "<group>";
+		};
 		F2DBD57729DF14BD0004C9E0 = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +96,7 @@
 				F186EACA29ED94B5003F9CC6 /* HomeworkPlannerView.swift */,
 				F186EACC29ED9626003F9CC6 /* AddItemView.swift */,
 				F186EAD029ED9678003F9CC6 /* ToDoList.swift */,
+				F22F888E2A0013FB0007FA92 /* Directory */,
 				F2DBD58729DF14C10004C9E0 /* Assets.xcassets */,
 				F2DBD58929DF14C10004C9E0 /* Preview Content */,
 			);
@@ -164,9 +187,14 @@
 				F2DBD58429DF14BD0004C9E0 /* QAJF_Barrington_School_Student_ToolApp.swift in Sources */,
 				ADB0CE5D29F0344D00CE2A9C /* MapImageView.swift in Sources */,
 				F186EAD729F9710B003F9CC6 /* ScheduleView.swift in Sources */,
+				F22F88962A0015180007FA92 /* TeacherRowView.swift in Sources */,
 				F186EAD129ED9678003F9CC6 /* ToDoList.swift in Sources */,
+				F22F88922A0014D50007FA92 /* TeacherDataObject.swift in Sources */,
+				F22F88942A0014F60007FA92 /* TeacherDirectoryView.swift in Sources */,
 				F186EACB29ED94B5003F9CC6 /* HomeworkPlannerView.swift in Sources */,
+				F22F88902A0014880007FA92 /* SearchObservableObject.swift in Sources */,
 				F186EACD29ED9626003F9CC6 /* AddItemView.swift in Sources */,
+				F22F888D2A0013EA0007FA92 /* DirectoryData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
