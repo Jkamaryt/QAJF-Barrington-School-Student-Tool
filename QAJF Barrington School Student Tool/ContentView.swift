@@ -50,7 +50,7 @@ struct ContentView: View {
                     Button(action: {showingDirectoryView = true}) {
                         Text("BHS Directory")
                     }.buttonStyle(CustomButtonStyle2())
-                        .padding().position(x:200, y:-70).background(Color.red)
+                        .padding().position(x:200, y:-250).background(Color.red)
                         .fullScreenCover(isPresented:$showingDirectoryView, content:{ TeacherDirectoryView()})
                     
                 }

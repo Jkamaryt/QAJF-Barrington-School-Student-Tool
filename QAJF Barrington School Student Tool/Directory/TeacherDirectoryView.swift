@@ -14,7 +14,11 @@ struct TeacherDirectoryView: View {
     var body: some View {
         NavigationView{
             VStack{
-                Text("")
+                Text("Begin typing the name of your teacher above to find more information about them!").font(.caption)
+                    .position(x:180, y:20)
+                    .foregroundColor(Color.gray)
+                    
+                    
             }
             .padding()
             .frame(maxWidth: .infinity, maxHeight: .infinity)
