@@ -12,6 +12,7 @@ struct ContentView: View {
     @State private var showingMapView = false
     @State private var showingBHSLinkView = false
     @State private var showingScheduleView = false
+    @State private var showingDirectoryView = false
     var body: some View {
         NavigationView {
             
@@ -45,6 +46,13 @@ struct ContentView: View {
                     }.buttonStyle(CustomButtonStyle2())
                         .padding().position(x:200, y:-190).background(Color.red)
                         .fullScreenCover(isPresented:$showingScheduleView, content:{ ScheduleView()})
+                    
+                    Button(action: {showingDirectoryView = true}) {
+                        Text("BHS Directory")
+                    }.buttonStyle(CustomButtonStyle2())
+                        .padding().position(x:200, y:-70).background(Color.red)
+                        .fullScreenCover(isPresented:$showingDirectoryView, content:{ MapView()})
+                    
                 }
             }
             
