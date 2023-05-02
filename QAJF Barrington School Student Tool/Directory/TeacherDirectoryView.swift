@@ -28,10 +28,15 @@ struct TeacherDirectoryView: View {
         }
         .searchable(text: $searchText)
         {
-            ForEach(oo.searchResults) { teacher in
-                TeacherRowView(teacher: teacher)
-            }
-        }
+                    ForEach(oo.searchResults) { teacher in
+                        NavigationLink(
+                            destination: TeacherDetailView(teacher: teacher),
+                            label: {
+                                TeacherRowView(teacher: teacher)
+                            }
+                        )
+                    }
+                }
         .onChange(of: searchText) { searchText in
             oo.searchResults = oo.data.filter({ teacher in
                 teacher.name.lowercased().contains(searchText.lowercased())
@@ -46,6 +51,4 @@ struct TeacherDirectoryView_Previews: PreviewProvider {
     }
 }
 
-//struct TeachersNames{
-  //  var teachers = ""
-//}
+

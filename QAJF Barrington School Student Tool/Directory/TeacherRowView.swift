@@ -10,6 +10,8 @@ import SwiftUI
 struct TeacherRowView: View {
     var teacher: TeacherDataObject
     var body: some View {
+        
+        NavigationLink(destination: TeacherDetailView(teacher: teacher)) {
             HStack{
                 Image(teacher.name)
                     .resizable()
@@ -17,7 +19,9 @@ struct TeacherRowView: View {
                     .padding()
                 Text(teacher.name)
                     .padding()
-            }   
+            }
+        }
+        
     }
 }
 
