@@ -9,13 +9,14 @@ import SwiftUI
 
 struct AddItemView: View {
     @Environment(\.presentationMode) var presentationMode
-    static let priorities = ["Choose One", "Homework", "Test", "Quiz", "Paper"]
-    static let Class = ["Choose One", "Math", "English", "Science", "Foreign Language", "History", "Fine Arts", "Engineering/Programming"]
+    static let priorities = ["Choose One", "Homework", "Test", "Quiz", "Paper", "Other"]
+    static let Class = ["Choose One", "Math", "English", "Science", "Foreign Language", "History", "Fine Arts", "Engineering/Programming", "Other"]
     @ObservedObject var toDoList: ToDoList
     @State private var priority = ""
     @State private var classes = ""
     @State private var description = ""
     @State private var dueDate = Date()
+    @State private var showingAlert = false
     var body: some View {
         NavigationView {
             ZStack{
@@ -40,10 +41,17 @@ struct AddItemView: View {
                         toDoList.items.append(item)
                         presentationMode.wrappedValue.dismiss()
                     }
+                    else {
+                        showingAlert = true
+                    }
+                    
                 })
             }
             .background(Color.red)
             .scrollContentBackground(.hidden)
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Error"), message: Text("You must choose an assignment and class before saving"), dismissButton: .default(Text("OK")))
         }
     }
 }
