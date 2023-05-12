@@ -15,9 +15,3 @@ struct TeacherDataObject: Identifiable {
     var email = ""
    
 }
-
-extension TeacherDataObject {
-    static func yeet() -> TeacherDataObject {
-        TeacherDataObject(name: "Custom", email: "Custom")
-    }
-}

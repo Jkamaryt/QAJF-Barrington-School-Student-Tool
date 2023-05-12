@@ -36,7 +36,7 @@ struct TeacherDetailView: View {
     
     struct TeacherDetailView_Previews: PreviewProvider {
         static var previews: some View {
-            TeacherDetailView(teacher: TeacherDataObject.yeet())
+            TeacherDetailView(teacher: TeacherDataObject())
         }
     }
 }

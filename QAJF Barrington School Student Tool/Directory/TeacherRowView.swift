@@ -27,6 +27,6 @@ struct TeacherRowView: View {
 
 struct TeacherRowView_Previews: PreviewProvider {
     static var previews: some View {
-        TeacherRowView(teacher: TeacherDataObject.yeet())
+        TeacherRowView(teacher: TeacherDataObject())
     }
 }
